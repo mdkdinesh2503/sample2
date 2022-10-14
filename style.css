@@ -825,6 +825,7 @@ header .navbar a:hover {
     line-height: 60px;
     border-radius: 50%;
     color: var(--blue);
+    overflow: hidden;
 }
 
 .subjects .box-container .box h3 {
