@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title logo link  -->
+    <link rel="shortcut icon" sizes="32x32" href="./images/title-img.png" type="image/x-icon" />
+
+    <title>C l o u d - L o g i n (S)</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- CSS Connection link  -->
+    <link rel="stylesheet" href="./stylelogin.css">
+
+</head>
+
+<body>
+
+    <!-- Header section Starts  -->
+
+    <header>
+
+        <a href="#" class="logo"> <i class="fas fa-cloud-moon"></i> <span>C</span>loud... </a>
+
+        <a class="btn-main" href="./HomePage.html"><i class="fas fa-home"></i><span>&numsp;Home Page</span></a>
+
+    </header>
+
+    <!-- Header section Ends  -->
+
+    <!-- Login form section starts  -->
+    <div class="home">
+        <div class="login-content">
+            <form action="">
+                <a href=""><img src="./images/review-img.png"></a>
+                <h2 class="title">user sign-in</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-spin fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" autocomplete="off" id="UserName" name="UserName" placeholder="Username"
+                            class="input" />
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-spin fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <input type="password" id="Password" name="Password" placeholder="Password " class="input" />
+                    </div>
+                </div>
+                <a class="forgotpass" href="#">Forgot Password?</a>
+                <input type="button" id="submit" onclick="validateuser()" class="btn-login" value="Login" />
+            </form>
+        </div>
+    </div>
+    <!-- login form section ends  -->
+
+</body>
+
+<script>
+
+    // Javascript validation form submit button starts here
+    var attempt = 3;
+    function validate() {
+
+        var UserName = document.getElementById("UserName").value;
+        var Password = document.getElementById("Password").value;
+
+        if (UserName == "Dk" && Password == "Dk@123") {
+
+            alert("Login Successfully...");
+            window.location = "StudentDashboard.html";
+            return false;
+
+        }
+        else {
+
+            attempt--;
+            alert("Invalid Crendentials\r\n" + "\tYou have only " + attempt + " attempt left!!!;");
+
+            if (attempt == 0) {
+
+                document.getElementById("UserName").disabled = true;
+                document.getElementById("Password").disabled = true;
+                document.getElementById("submit").disabled = true;
+                return false;
+
+            }
+        }
+    }
+    // Javascript validation form submit button ends here
+
+</script>
+
+</html>

@@ -1,0 +1,494 @@
+/*--------------------------------
+    Overall Style section starts here
+    ---------------------------------  */
+
+    :root {
+        --blue: #4070f4;
+        --dark-blue: #03262c;
+        --light-blue: #afc4ff;
+        --light-color: rgb(119, 119, 119);
+        --border: .2rem solid var(--blue);
+        --white: #fff;
+    }
+
+    * {
+        font-family: 'Nunito', sans-serif;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        transition: all .2s linear;
+        overflow: hidden;
+    }
+
+    html {
+        font-size: 55%;
+        max-zoom: 90%;
+        overflow: hidden;
+    }
+
+    /* Overall Style section ends here  */
+
+    /*--------------------------------
+    Overall header section starts here
+    ---------------------------------  */
+
+    header {
+        padding: 2rem 9%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 .5rem 1.5rem #0000001a;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: transparent;
+    }
+
+    header .logo {
+        font-size: 5rem;
+        color: var(--white);
+    }
+
+    header .logo i,
+    header .logo span {
+        color: var(--dark-blue);
+    }
+
+    /* Overall header section starts here  */
+
+        /*-----------------------
+    home section starts here
+    -------------------------*/
+
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-image: url(./images/homepage-img.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .home .content {
+        text-align: center;
+    }
+
+    .home .content .main {
+        font-size: 6rem;
+        font-family: serif;
+        font-weight: bolder;
+        color: var(--dark-blue);
+    }
+
+    .home .content .main span {
+        font-size: 6rem;
+        font-family: serif;
+        font-weight: bolder;
+        color: var(--white);
+    }
+
+    .home .content .sub {
+        font-size: 3rem;
+        color: var(--blue);
+        padding: .5rem 0;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* home section ends here  */
+
+    /*--------------------------------
+    button section starts here
+    ---------------------------------  */
+
+    .btn-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        gap: 1rem;
+        transform: translateX(25%);
+    }
+
+    .btn {
+        font-size: 2rem;
+        font-weight: bolder;
+        padding: 20px 45px;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.5s;
+        display: inline-flex;
+        margin-top: 1rem;
+        width: fit-content;
+        border: .2rem solid var(--blue);
+        border-radius: .5rem;
+        color: var(--blue);
+        background: var(--white);
+    }
+
+    .btn:hover {
+        background-color: var(--blue);
+        color: var(--white);
+    }
+
+    .btn-main {
+        font-size: 2rem;
+        font-weight: bolder;
+        padding: 20px 45px;
+        text-transform: capitalize;
+        letter-spacing: 2px;
+        cursor: pointer;
+        transition: 0.5s;
+        display: inline-flex;
+        margin-top: 1rem;
+        width: fit-content;
+        border: .2rem solid var(--blue);
+        border-radius: .5rem;
+        background-color: var(--blue);
+        color: var(--white);
+    }
+
+    .btn-main:hover {
+        color: var(--blue);
+        background: var(--white);
+    }
+
+    /* button section ends here  */
+
+    /* Responsive section starts here  */
+
+    @media (max-width:960px) {
+        .home .content .main {
+            font-size: 4rem;
+        }
+
+        .home .content .main span {
+            font-size: 4rem;
+        }
+
+        .home .content .sub {
+            font-size: 2rem;
+        }
+
+        .btn {
+            font-size: 1.7rem;
+            padding: 10px 20px;
+        }
+
+        .btn-content {
+            transform: translateX(17%);
+        }
+    }
+
+    @media (max-width:630px) {
+        .btn-main{
+            font-size: 1.5rem;
+        font-weight: bold;
+        padding: 15px 25px;
+        }
+    }
+
+    @media (max-width:540px) {
+        .btn-content {
+            display: flex;
+            flex-direction: column;
+            transform: translateX(35%);
+        }
+
+        .btn-content .btn {
+            margin: 10px;
+            width: 40%;
+        }
+    }
+
+    @media (max-width:500px) {
+
+        .home .content .main span {
+            visibility: hidden;
+            display: none;
+        }
+
+        .home .content .sub {
+            color: var(--white);
+            font-size: 2rem;
+        }
+
+        .home .content .main {
+            font-size: 5rem;
+        }
+
+        .btn-content .btn {
+            font-size: 1.5rem;
+            padding: 10px 19px;
+        }
+
+        .btn-main span{
+            display: none;
+            visibility: hidden;
+        }
+    }
+
+    @media (max-width:415px) {
+
+        header .logo, header .logo span {
+            font-size: 3.5rem;
+        }
+
+        header .logo i {
+            font-size: 4rem;
+        }
+
+        .btn-content {
+            transform: translateX(25%);
+        }
+
+        .btn-main{
+            padding: 12px 20px;
+        }
+
+        .btn-content .btn {
+            width: 50%;
+        }
+    }
+
+    @media (max-width:360px) {
+
+        .home .content .main {
+            font-size: 6rem;
+            ;
+        }
+
+        .home .content .sub {
+            font-size: 1.3rem;
+            ;
+        }
+
+        .btn-content {
+            transform: translateX(15%);
+        }
+
+        .btn-content .btn {
+            margin: 10px;
+            width: 55%;
+        }
+
+        .btn-content .btn {
+            margin: 10px;
+            width: 70%;
+        }
+    }
+
+    /* Responsive section ends here  */
+
+    /* Student login starts here */
+
+    /*--------------------------------
+    Login form section starts here
+    ---------------------------------  */
+
+    .login-content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+    }
+
+    form {
+        width: 420px;
+    }
+
+    .login-content img {
+        height: 150px;
+        border-radius: 100%;
+    }
+
+    .login-content .title {
+        margin: 15px 0;
+        color: var(--dark-blue);
+        text-transform: uppercase;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 500;
+        text-shadow: .4rem .4rem 0 var(--light-blue);
+        font-size: 4rem;
+    }
+
+    .login-content .input-div {
+        position: relative;
+        display: grid;
+        grid-template-columns: 10% 90%;
+        margin: 25px 0;
+        padding: 5px 0;
+        border-bottom: 2px solid var(--light-blue);
+    }
+
+    .login-content .input-div:hover {
+        border-bottom: 3px solid var(--dark-blue);
+        transition: .3s;
+        transform-origin: right;
+    }
+
+    .i {
+        color: var(--blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+    }
+
+    .input-div div {
+        position: relative;
+        height: 45px;
+    }
+
+    ::placeholder {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--white);
+        font-size: 20px;
+        transition: .3s;
+    }
+
+    .input-div div input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 0.5rem 0.7rem;
+        font-size: 28px;
+        font-weight: 300;
+        color: var(--white);
+        font-family: 'poppins', sans-serif;
+    }
+
+    .login-content .input-div.one {
+        margin-top: 0;
+    }
+
+    .login-content .input-div.pass {
+        margin-bottom: 4px;
+    }
+
+    .forgotpass {
+        display: block;
+        width: fit-content;
+        float: right;
+        text-decoration: none;
+        color: var(--white);
+        margin: 10px;
+        font-size: 2rem;
+        transition: .3s;
+    }
+
+    .forgotpass:hover {
+        color: var(--blue);
+    }
+
+    .btn-login {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+        background-image: linear-gradient(to right, #1e58f7, #3d6beb, #123596);
+        font-size: 2rem;
+        line-height: 10px;
+        color: var(--dark-blue);
+        font-weight: 900;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        margin: 1rem 0;
+        cursor: pointer;
+        transition: .5s;
+        background-size: 200%;
+    }
+
+    .btn-login:hover {
+        background-position: right;
+    }
+
+    /* Login form section ends here  */
+
+    /* Responsive section starts here  */
+
+    @media (max-width:1300px) {
+
+        .login-content img {
+            height: 100px;
+        }
+
+        .login-content .title {
+            font-size: 2.4rem;
+        }
+
+        form {
+            width: 300px;
+        }
+
+        ::placeholder {
+            font-size: 14px;
+        }
+
+        .input-div div input {
+            font-size: 19px;
+        }
+
+        .login-content .input-div {
+            margin: 10px 0;
+        }
+
+        .forgotpass {
+            font-size: 1rem;
+        }
+
+        .btn-login {
+            height: 40px;
+            font-size: 1.5rem;
+        }
+
+    }
+
+
+    @media screen and (max-width: 300px) {
+        .login-content img {
+            height: 90px;
+        }
+
+        .login-content .title {
+            font-size: 2rem;
+        }
+
+        ::placeholder {
+            font-size: 12px;
+        }
+
+        .input-div div input {
+            font-size: 14px;
+        }
+
+        .forgotpass {
+            font-size: .8rem;
+        }
+
+        .btn-login {
+            height: 30px;
+            font-size: 1rem;
+        }
+
+        .login-content .input-div {
+            margin: 8px 0;
+        }
+
+    }
+
+    /* Responsive section ends here  */
