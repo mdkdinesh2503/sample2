@@ -215,8 +215,8 @@ header {
 .header-actions a:hover {
     background: var(--white);
     color: var(--blue);
-    border: 1px solid var(--light-blue);
-    box-shadow: .5rem .5rem 0 var(--light-blue);
+    border: var(--border);
+    box-shadow: var(--box-shadow);
 }
 
 /* Not in common  */
