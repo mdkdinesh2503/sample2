@@ -819,10 +819,10 @@ header .navbar a:hover {
 .subjects .box-container .box i {
     height: 10rem;
     margin-bottom: .7rem;
-    font-size: 7rem;
+    font-size: 6rem;
     background-color: var(--light-blue);
     padding: 2rem;
-    line-height: 60px;
+    line-height: 58px;
     border-radius: 50%;
     color: var(--blue);
     overflow: hidden;
